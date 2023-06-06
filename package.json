@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "studiobrain",
+  "version": "1.0.0",
+  "description": "Recording studio climate and security monitor for Raspberry Pi devices",
+  "main": "src/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billpatrianakos/studiobrain.git"
+  },
+  "author": "Bill Patrianakos",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/billpatrianakos/studiobrain/issues"
+  },
+  "homepage": "https://github.com/billpatrianakos/studiobrain#readme"
+}
