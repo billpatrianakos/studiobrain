@@ -1,13 +1,15 @@
 {
+  "name": "studiobrain",
+  "version": "1.0.0",
+  "description": "Master server for climate control, data, and other remote studio functions on Raspberry Pi",
+  "main": "srv/index.js",
   "dependencies": {
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",
-    "knex": "^2.4.2"
+    "knex": "^2.4.2",
+    "objection": "^3.0.1",
+    "pg": "^8.11.0"
   },
-  "name": "studiobrain",
-  "version": "1.0.0",
-  "description": "Recording studio climate and security monitor for Raspberry Pi devices",
-  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +17,15 @@
     "type": "git",
     "url": "git+https://github.com/billpatrianakos/studiobrain.git"
   },
-  "author": "Bill Patrianakos",
+  "keywords": [
+    "raspberry",
+    "pi",
+    "temperature",
+    "humidity",
+    "sensor",
+    "vpn"
+  ],
+  "author": "Bill P <bill@billpatrianakos.com>",
   "license": "Unlicense",
   "bugs": {
     "url": "https://github.com/billpatrianakos/studiobrain/issues"
