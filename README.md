@@ -12,10 +12,15 @@ With all that out of the way, now you know why this exists and if it would help 
 
 ## Installation
 
+*Note: Step 1 should be changed to accomodate how you want to deploy this to your Pi. You have the option of cloning the project directly to each Pi and starting them manually or you can clone the project to your dev machine and deploy to each Pi using PM2. PM2 deploy is recommended. Makes for easier updates and process management although it's a bit more work to set up initially*
+
 On your server and client Raspberry Pi units...
 
-1. Clone the project to each Pi you'll use this on and decide which will be the server and which the client(s)
-2. Install Nginx on the server unit
-3. Connect all units to a VPN if you want to be able to access this from outside your home network (advised)
-4. Install the version of Node required (running `nvm use` in the project folder will tell you the command)
-5. To be continued...
+1. Clone the project to your dev machine, install nvm and install the Node version called for in the `.nvmrc` file
+2. Install all dev machine dependencies with `npm install -g knex pm2`
+3. At this point you may want to create a branch for each Pi you'll be using this on. You're about to change configuration files which will differ per machine
+4. Update __`CONFIG FILES TBD`__ (a PR with a script that prompts you for the config settings and writes them to appropriate files would be cool)
+5. Install Nginx on the server unit. Client nodes will only be calling out to the server so no need for Nginx or Apache here. Set all units up to send and receive data over HTTP in some way. They'll all need to call out to port 80 or 443 on a server. Configure your firewall as needed per Pi.
+6. Connect all units to a VPN if you want to be able to access this from outside your home network (advised). Tinc is simple and secure.
+7. Repeat step 2 on each Raspberry Pi using the same Node version running on your dev machine
+8. To be continued...
